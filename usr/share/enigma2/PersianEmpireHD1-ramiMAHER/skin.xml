@@ -1,5 +1,5 @@
 <skin>
-<!--
+ <!--
 # PersianEmpireHD1 Skin By ramiMAHER #
 
 THIS SKIN IS OPEN SOURCE SOFTWARE.
@@ -116,161 +116,166 @@ PersianEmpireHD1 - Copyright (C) 2012 GPL-III by ramiMAHER
     <color name="WindowTitleBackground" color="black" />
   </windowstyle>
   <screen name="InfoBar" position="0,29" size="1282,714" title="InfoBar" backgroundColor="transparent2" flags="wfNoBorder">
-    <ePixmap position="1,415" zPosition="-1" size="1280,721" pixmap="PersianEmpireHD1-ramiMAHER/rami-infobar.png" />
-    <ePixmap alphatest="blend" pixmap="PersianEmpireHD1-ramiMAHER/slider_back2.png" position="285,547" size="775,4" zPosition="1" />
-    <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rec.off.png" position="231,629" size="67,31" zPosition="1" alphatest="blend" />
-    <eLabel text="SNR" zPosition="4" position="1012,634" size="38,20" halign="left" font="LCD; 18" transparent="1" backgroundColor="black" foregroundColor="unf23d21" />
-    <widget source="session.FrontendStatus" render="Label" position="1049,634" zPosition="4" size="71,20" halign="left" font="LCD; 18" foregroundColor="unff0000" transparent="1" backgroundColor="black">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <widget source="session.FrontendStatus" render="Label" position="970,634" zPosition="4" size="84, 20" font="LCD; 18" halign="left" backgroundColor="black" transparent="1">
-      <convert type="FrontendInfo">AGC</convert>
-    </widget>
-    <eLabel text="AGC" zPosition="4" position="929,634" size="41,20" halign="left" font="LCD; 18" transparent="1" backgroundColor="black" />
-    <widget source="session.FrontendStatus" render="Progress" position="1091,632" size="115,21" zPosition="3" pixmap="PersianEmpireHD1-ramiMAHER/icons/snron.png" transparent="1">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <widget position="379,445" size="500,45" source="session.CurrentService" render="Label" font="rami; 33" valign="bottom" halign="center" noWrap="1" backgroundColor="black" shadowColor="#000000" shadowOffset="-1,-1" transparent="1" foregroundColor="un0002B3C3">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="936,456" size="156,39" font="Regular; 37" valign="top" halign="center" backgroundColor="black" transparent="1" foregroundColor="unf23d21">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_dolby_off.png" position="445,629" size="77,31" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_dolby_on.png" position="445,629" size="77,31" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_format_off.png" position="593,629" size="77,31" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_format_on.png" position="593,629" size="77,31" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_txt_off.png" position="302,629" size="67,31" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_txt_on.png" position="302,629" size="67,31" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_crypt_off.png" position="373,629" size="67,31" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_crypt_on.png" position="373,629" size="67,31" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap position="519,629" size="67,31" zPosition="1" pixmap="PersianEmpireHD1-ramiMAHER/ico_hd_off.png" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" position="519,629" size="67,31" zPosition="2" pixmap="PersianEmpireHD1-ramiMAHER/ico_hd_on.png" alphatest="blend">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="253,514" size="80,30" halign="right" font="Regular;25" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <eLabel text="-" position="335,514" size="20,30" halign="center" font="Regular;25" backgroundColor="transpBlack" transparent="1" />
-    <widget source="session.Event_Now" render="Label" position="356,514" size="80,30" halign="left" font="Regular;25" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="437,514" size="590,30" halign="left" font="Regular;25" backgroundColor="transpBlack" transparent="1" noWrap="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="1028,514" size="122,30" halign="right" font="Regular; 23" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="255,557" size="80,28" halign="right" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <eLabel text="-" position="337,557" size="20,30" halign="center" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1" />
-    <widget source="session.Event_Next" render="Label" position="358,557" size="80,30" halign="left" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="439,557" size="590,30" halign="left" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1" noWrap="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="1030,556" size="122,30" halign="right" font="Regular; 23" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Picon" position="88,511" size="130,80" zPosition="10" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="PersianEmpireHD1-ramiMAHER/slider.png" position="285,547" size="775,4" zPosition="2" transparent="1">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget source="session.RecordState" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/rec.png" position="231,629" size="67,31" zPosition="2" alphatest="blend">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <eLabel text="A" position="1113,472" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <eLabel text="B" position="1135,472" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <eLabel text="C" position="1157,472" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <eLabel text="D" position="1179,472" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="1113,472" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="1135,472" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="1157,472" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">4</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="1179,472" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
-      <convert type="TunerInfo">TunerUseMask</convert>
-      <convert type="ValueBitTest">8</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="1113,472" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="1135,472" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" transparent="1" foregroundColor="un0002B3C3">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="1157,472" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="1179,472" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
-      <convert type="FrontendInfo">NUMBER</convert>
-      <convert type="ValueRange">3,3</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Label" font="Regular; 23" position="64,629" size="76,24" halign="right" backgroundColor="black" transparent="1">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" font="Regular; 25" position="142,629" size="17,23" halign="center" backgroundColor="transpBlack" transparent="1" foregroundColor="darkgrey" />
-    <widget source="session.CurrentService" render="Label" font="Regular; 23" position="161,629" size="60,24" halign="left" backgroundColor="black" transparent="1">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="589,597" size="605,18" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="white" font="Regular; 17" valign="center" halign="center">
-      <convert type="pliCaidDisplay">Default</convert>
-    </widget>
-    <ePixmap position="1091,632" zPosition="2" size="115,21" pixmap="PersianEmpireHD1-ramiMAHER/icons/snroff.png" alphatest="blend" />
-    <widget source="session.CurrentService" render="Label" position="80,598" size="495,18" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="darkgrey" font="Regular; 17" valign="center" halign="left">
-      <convert type="pliExpertInfo">ServiceInfo</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="679,640" zPosition="3" size="216,18" font="Regular; 17" valign="center" halign="center" transparent="1" backgroundColor="black">
-      <convert type="PliExtraInfo">CryptoBar</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="681,619" zPosition="21" size="205,18" valign="center" halign="center" font="Regular; 17" transparent="1" backgroundColor="background" foregroundColor="yellow">
-      <convert type="pliCamdInfo">Camd</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="64,477" size="156,25" font="Regular; 25" halign="right" backgroundColor="black" foregroundColor="darkgrey" transparent="1">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
-    </widget>
-  </screen>
+  <ePixmap position="1,415" zPosition="-1" size="1280,721" pixmap="PersianEmpireHD1-ramiMAHER/rami-infobar.png" />
+  <ePixmap alphatest="blend" pixmap="PersianEmpireHD1-ramiMAHER/slider_back2.png" position="285,547" size="775,4" zPosition="1" />
+  <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rec.off.png" position="231,629" size="67,31" zPosition="1" alphatest="blend" />
+  <eLabel text="SNR" zPosition="4" position="1016,634" size="38,20" halign="left" font="LCD; 17" transparent="1" backgroundColor="black" foregroundColor="unf23d21" />
+  <widget source="session.FrontendStatus" render="Label" position="1057,634" zPosition="4" size="71,20" halign="left" font="LCD; 17" foregroundColor="unff0000" transparent="1" backgroundColor="black">
+  <convert type="FrontendInfo">SNR</convert>
+</widget>
+  <widget source="session.FrontendStatus" render="Label" position="966,634" zPosition="4" size="84, 20" font="LCD; 17" halign="left" backgroundColor="black" transparent="1">
+  <convert type="FrontendInfo">AGC</convert>
+</widget>
+  <eLabel text="AGC" zPosition="4" position="923,634" size="41,20" halign="left" font="LCD; 17" transparent="1" backgroundColor="black" />
+  <widget source="session.FrontendStatus" render="Progress" position="1091,632" size="115,21" zPosition="3" pixmap="PersianEmpireHD1-ramiMAHER/icons/snron.png" transparent="1">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget position="379,445" size="500,45" source="session.CurrentService" render="Label" font="rami; 33" valign="bottom" halign="center" noWrap="1" backgroundColor="black" shadowColor="#000000" shadowOffset="-1,-1" transparent="1" foregroundColor="un0002B3C3">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1065,455" size="156,39" font="Regular; 37" valign="top" halign="center" backgroundColor="black" transparent="1" foregroundColor="unf23d21">
+  <convert type="ClockToText">Default</convert>
+</widget>
+  <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_dolby_off.png" position="445,629" size="77,31" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_dolby_on.png" position="445,629" size="77,31" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_format_off.png" position="593,629" size="77,31" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_format_on.png" position="593,629" size="77,31" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_txt_off.png" position="302,629" size="67,31" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_txt_on.png" position="302,629" size="67,31" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ico_crypt_off.png" position="373,629" size="67,31" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/ico_crypt_on.png" position="373,629" size="67,31" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap position="519,629" size="67,31" zPosition="1" pixmap="PersianEmpireHD1-ramiMAHER/ico_hd_off.png" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" position="519,629" size="67,31" zPosition="2" pixmap="PersianEmpireHD1-ramiMAHER/ico_hd_on.png" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="253,514" size="80,30" halign="right" font="Regular;25" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel text="-" position="335,514" size="20,30" halign="center" font="Regular;25" backgroundColor="transpBlack" transparent="1" />
+  <widget source="session.Event_Now" render="Label" position="356,514" size="80,30" halign="left" font="Regular;25" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="437,514" size="590,30" halign="left" font="Regular;25" backgroundColor="transpBlack" transparent="1" noWrap="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1028,514" size="122,30" halign="right" font="Regular; 23" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="255,557" size="80,28" halign="right" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel text="-" position="337,557" size="20,30" halign="center" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1" />
+  <widget source="session.Event_Next" render="Label" position="358,557" size="80,30" halign="left" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="439,557" size="590,30" halign="left" font="Regular;25" foregroundColor="grey" backgroundColor="transpBlack" transparent="1" noWrap="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1030,556" size="122,30" halign="right" font="Regular; 23" foregroundColor="grey" backgroundColor="transpBlack" transparent="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" position="88,511" size="130,80" zPosition="10" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" pixmap="PersianEmpireHD1-ramiMAHER/slider.png" position="285,547" size="775,4" zPosition="2" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.RecordState" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/rec.png" position="231,629" size="67,31" zPosition="2" alphatest="blend">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+ <eLabel text="FAN:" position="74,457" size="55,18" font="Regular; 17" backgroundColor="black" transparent="1" foregroundColor="yellow" />
+  <eLabel text="CPU:" position="74,479" size="55,18" font="Regular; 17" backgroundColor="black" transparent="1" foregroundColor="yellow" />
+  <eLabel text="A" position="701,618" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+  <eLabel text="B" position="730,618" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+  <eLabel text="C" position="756,618" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+  <eLabel text="D" position="784,618" zPosition="1" size="20,22" font="Regular;18" halign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="701,618" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="730,618" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="756,618" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="784,618" zPosition="2" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="unf23d21" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="701,618" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="730,618" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" transparent="1" foregroundColor="un0002B3C3">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="756,618" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="784,618" zPosition="3" size="20,22" font="Regular;18" halign="center" backgroundColor="black" foregroundColor="un0002B3C3" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular; 17" position="82,633" size="52,18" halign="right" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="3">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" font="Regular; 25" position="135,629" size="17,23" halign="center" backgroundColor="transpBlack" transparent="1" foregroundColor="darkgrey" />
+  <widget source="session.CurrentService" render="Label" font="Regular; 17" position="153,633" size="50,18" halign="left" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="3">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="589,597" size="605,18" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="white" font="Regular; 17" valign="center" halign="center">
+    <convert type="pliCaidDisplay">Default</convert>
+  </widget>
+  <ePixmap position="1096,632" zPosition="2" size="115,21" pixmap="PersianEmpireHD1-ramiMAHER/icons/snroff.png" alphatest="blend" />
+  <widget source="session.CurrentService" render="Label" position="80,598" size="495,18" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="darkgrey" font="Regular; 17" valign="center" halign="left">
+    <convert type="pliExpertInfo">ServiceInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="679,640" zPosition="3" size="216,18" font="Regular; 17" valign="center" halign="center" transparent="1" backgroundColor="black">
+    <convert type="PliExtraInfo">CryptoBar</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="906,468" size="156,25" font="Regular; 25" halign="right" backgroundColor="black" foregroundColor="darkgrey" transparent="1">
+  <convert type="ClockToText">Format:%d.%m.%Y</convert>
+</widget>
+  <widget render="Label" source="global.CurrentTime" position="124,479" size="99,18" font="Regular; 17" halign="left" valign="center" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="3">
+    <convert type="pliSensors">TempMAXfull</convert>
+  </widget>
+  <widget render="Label" source="global.CurrentTime" position="123,457" size="99,18" font="Regular; 17" halign="left" valign="center" backgroundColor="black" foregroundColor="white" transparent="1" zPosition="3">
+    <convert type="pliSensors">FanRPMfull</convert>
+  </widget>
+</screen>
   <screen name="DeliteGreenPanel" position="0,0" size="1280,720" title="Black Hole Green Panel" flags="wfNoBorder">
     <widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
     <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
@@ -682,7 +687,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
     <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/aboutt.png" position="942,428" size="200,195" alphatest="blend" />
     <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/hd.png" position="561,650" size="161,37" alphatest="blend" />
     <widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-	<eLabel text="Persian Empire Enigma2 Image" position="60,160" size="540,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1" />
+    <eLabel text="Persian Empire Enigma2 Image" position="60,160" size="540,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1" />
     <widget source="EnigmaVersion" render="Label" position="60,190" size="540,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1" />
     <widget source="ImageVersion" render="Label" position="60,220" size="540,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1" />
     <widget source="FPVersion" render="Label" position="60,250" size="540,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1" />
@@ -1295,8 +1300,7 @@ MultiContentEntryText(pos = (50, 30), size = (555, 60), font = 1, flags = RT_HAL
     <widget name="config" position="80,150" size="795,425" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button1080x25.png" transparent="1" />
   </screen>
   <screen name="NumberZap" position="490,355" size="300,60" title="Channel:">&gt;
-<widget name="channel" position="0,0" size="0,0" font="Regular;26" />
-<widget name="number" position="0,12" size="300,36" halign="center" font="Regular;30" /></screen>
+<widget name="channel" position="0,0" size="0,0" font="Regular;26" /><widget name="number" position="0,12" size="300,36" halign="center" font="Regular;30" /></screen>
   <screen name="ParentalControlChangePin" position="0,0" size="1280,720" title="Change pin code" flags="wfNoBorder">
     <widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
     <ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
@@ -2451,9 +2455,7 @@ MultiContentEntryText(pos = (10, 22), size = (560, 46), font=3, flags = RT_HALIG
     <eLabel text="INFO" position="620,10" size="70,0" zPosition="1" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
     <eLabel text="MENU" position="720,10" size="100,0" zPosition="1" font="Regular;24" halign="left" backgroundColor="black" transparent="1" />
     <widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
-<widget name="HelpWindow" position="90,410" zPosition="1" size="1,1" transparent="1" alphatest="blend" />
-<eLabel name="new eLabel" position="0, 0" size="10, 10" />
-<widget name="VKeyIcon" position="0,0" size="0,0" /></screen>
+<widget name="HelpWindow" position="90,410" zPosition="1" size="1,1" transparent="1" alphatest="blend" /><eLabel name="new eLabel" position="0, 0" size="10, 10" /><widget name="VKeyIcon" position="0,0" size="0,0" /></screen>
   <screen name="MyTubeSuggestionsListScreen" position="90,154" zPosition="6" size="480,260" flags="wfNoBorder">
     <ePixmap position="0,0" zPosition="-1" size="480,160" alphatest="blend" transparent="1" backgroundColor="transparent" />
     <widget source="suggestionslist" render="Listbox" position="10,5" zPosition="7" size="480,250" scrollbarMode="showOnDemand" transparent="1" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png">
@@ -2554,111 +2556,8 @@ MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN
     <ePixmap position="570,525" size="100,40" zPosition="4" pixmap="PersianEmpireHD1-ramiMAHER/mytube.png" alphatest="blend" transparent="1" />
     <widget name="title" position="0,0" size="0,0" />
   </screen>&gt;
-<screen name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder">
-<ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/searchh.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/antenna.png" position="1051,170" size="265,265" zPosition="1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="140,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="410,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="680,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="950,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/ramiMAHER.png" position="765,176" size="300,200" alphatest="blend" />
-<widget name="red" position="190,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="green" position="460,652" size="220,26" zPosition="1" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget name="yellow" position="730,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="blue" position="1000,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="list" position="90,150" size="540,155" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget name="snr_db" position="140,320" size="200,24" halign="center" valign="center" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="SNR:" position="90,350" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="snr_bar" position="180,350" size="200,20" borderWidth="1" transparent="1" />
-<widget name="snr_percentage" position="390,350" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="BER:" position="90,380" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="ber_bar" position="180,380" size="200,20" borderWidth="1" transparent="1" />
-<widget name="ber_value" position="390,380" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="Lock:" position="90,410" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="lock_state" position="180,410" size="200,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="Frequency:" position="90,440" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="frequency_value" position="250,440" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="Symbolrate:" position="90,470" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="symbolrate_value" position="250,470" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="FEC:" position="90,500" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="fec_value" position="250,500" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="Adaptertext" render="Label" position="60,150" size="140,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="Adapter" render="Label" position="220,150" size="380,25" zPosition="1" font="Regular;22" halign="right" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="60,180" size="540,150" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="introduction2" render="Label" position="60,560" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" />
-<widget source="introduction" render="Label" position="60,360" size="300,25" font="Regular;22" backgroundColor="transpBlack" halign="left" transparent="1" />
-<widget source="IPtext" render="Label" position="60,390" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="IP" render="Label" position="220,390" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" />
-<widget source="Netmasktext" render="Label" position="60,420" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="Mask" render="Label" position="220,420" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" />
-<widget source="Gatewaytext" render="Label" position="60,450" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="Gateway" render="Label" position="220,450" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" />
-<widget source="DNS1text" render="Label" position="60,480" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="DNS1" render="Label" position="220,480" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" />
-<widget source="DNS2text" render="Label" position="60,510" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="DNS2" render="Label" position="220,510" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" />
-<widget name="HelpWindow" position="680,465" zPosition="2" size="1,1" transparent="1" alphatest="blend" />
-<widget source="VKeyIcon" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/buttons/key_text.png" position="1013,585" zPosition="1" size="35,25" transparent="1" alphatest="blend"><convert type="ConditionalShowHide" /></widget>
-<ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="750,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_blue" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Statustext" render="Label" position="90,647" size="120,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" transparent="1" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="IFtext" render="Label" position="60,150" size="140,25" zPosition="10" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget source="IF" render="Label" position="200,150" size="380,25" zPosition="10" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget name="menulist" position="60,200" size="540,200" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="description" render="Label" position="60,410" size="540,150" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />&gt;
-<widget source="Statustext" render="Label" position="90,647" size="120,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" transparent="1" />
-<widget name="statuspic" position="183,650" size="15,16" pixmaps="PersianEmpireHD1-ramiMAHER/buttons/button_green.png,PersianEmpireHD1-ramiMAHER/buttons/button_green_off.png" zPosition="10" transparent="1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="NameserverSetup" position="0,0" size="1280,720" title="Nameserver Setup" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="60,150" size="540,375" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="1" font="Regular;24" halign="center" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" />
-<widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="1" font="Regular;24" halign="center" transparent="1" />
-<widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="NetworkAdapterSelection" position="0,0" size="1280,720" title="Select Network Adapter" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="list" render="Listbox" position="60,160" size="540,280" zPosition="10" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent"><!--  iface, name, description, interfacepng, defaultpng, activepng, divpng  -->
+<screen name="PositionerSetup" position="0,0" size="1280,720" title="Positioner setup..." flags="wfNoBorder"><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/searchh.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/antenna.png" position="1051,170" size="265,265" zPosition="1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="140,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="410,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="680,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="950,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/ramiMAHER.png" position="765,176" size="300,200" alphatest="blend" /><widget name="red" position="190,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="green" position="460,652" size="220,26" zPosition="1" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" /><widget name="yellow" position="730,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="blue" position="1000,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="list" position="90,150" size="540,155" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget name="snr_db" position="140,320" size="200,24" halign="center" valign="center" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="SNR:" position="90,350" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="snr_bar" position="180,350" size="200,20" borderWidth="1" transparent="1" /><widget name="snr_percentage" position="390,350" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="BER:" position="90,380" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="ber_bar" position="180,380" size="200,20" borderWidth="1" transparent="1" /><widget name="ber_value" position="390,380" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="Lock:" position="90,410" size="80,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="lock_state" position="180,410" size="200,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="Frequency:" position="90,440" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="frequency_value" position="250,440" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="Symbolrate:" position="90,470" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="symbolrate_value" position="250,470" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><eLabel text="FEC:" position="90,500" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="fec_value" position="250,500" size="150,24" font="Regular;22" backgroundColor="transpBlack" transparent="1" /></screen><screen name="AdapterSetup" position="0,0" size="1280,720" title="Network Setup" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="Adaptertext" render="Label" position="60,150" size="140,25" zPosition="1" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="Adapter" render="Label" position="220,150" size="380,25" zPosition="1" font="Regular;22" halign="right" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="60,180" size="540,150" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="introduction2" render="Label" position="60,560" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" /><widget source="introduction" render="Label" position="60,360" size="300,25" font="Regular;22" backgroundColor="transpBlack" halign="left" transparent="1" /><widget source="IPtext" render="Label" position="60,390" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="IP" render="Label" position="220,390" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" /><widget source="Netmasktext" render="Label" position="60,420" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="Mask" render="Label" position="220,420" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" /><widget source="Gatewaytext" render="Label" position="60,450" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="Gateway" render="Label" position="220,450" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" /><widget source="DNS1text" render="Label" position="60,480" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="DNS1" render="Label" position="220,480" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" /><widget source="DNS2text" render="Label" position="60,510" size="140,22" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="DNS2" render="Label" position="220,510" size="380,22" zPosition="1" font="Regular;20" backgroundColor="transpBlack" halign="right" transparent="1" /><widget name="HelpWindow" position="680,465" zPosition="2" size="1,1" transparent="1" alphatest="blend" /><widget source="VKeyIcon" render="Pixmap" pixmap="PersianEmpireHD1-ramiMAHER/buttons/key_text.png" position="1013,585" zPosition="1" size="35,25" transparent="1" alphatest="blend"><convert type="ConditionalShowHide" /></widget><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="750,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_blue" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="AdapterSetupConfiguration" position="0,0" size="1280,720" title="Network Configuration..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Statustext" render="Label" position="90,647" size="120,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" transparent="1" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="IFtext" render="Label" position="60,150" size="140,25" zPosition="10" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget source="IF" render="Label" position="200,150" size="380,25" zPosition="10" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget name="menulist" position="60,200" size="540,200" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="description" render="Label" position="60,410" size="540,150" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />&gt;
+<widget source="Statustext" render="Label" position="90,647" size="120,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" transparent="1" /><widget name="statuspic" position="183,650" size="15,16" pixmaps="PersianEmpireHD1-ramiMAHER/buttons/button_green.png,PersianEmpireHD1-ramiMAHER/buttons/button_green_off.png" zPosition="10" transparent="1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="NameserverSetup" position="0,0" size="1280,720" title="Nameserver Setup" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="60,150" size="540,375" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="1" font="Regular;24" halign="center" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" /><widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="1" font="Regular;24" halign="center" transparent="1" /><widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="NetworkAdapterSelection" position="0,0" size="1280,720" title="Select Network Adapter" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="list" render="Listbox" position="60,160" size="540,280" zPosition="10" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent"><!--  iface, name, description, interfacepng, defaultpng, activepng, divpng  -->
 {"template": [
 MultiContentEntryText(pos = (85, 6), size = (430, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1), # index 1 is the interfacename
 MultiContentEntryText(pos = (85, 43), size = (430, 20), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text = 2), # index 2 is the description
@@ -2668,71 +2567,7 @@ MultiContentEntryPixmapAlphaTest(pos = (63, 46), size = (15, 16), png = 4), # in
 "fonts": [gFont("Regular", 26),gFont("Regular", 20)],
 "itemHeight": 70
 }
-</convert></widget>
-<widget source="introduction" render="Label" position="60,480" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" />
-<widget source="introduction" render="Label" position="60,480" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network test..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="Adaptertext" position="60,130" size="310,25" zPosition="1" font="Regular;22" transparent="1" />
-<widget name="Adapter" position="60,160" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" />
-<widget name="AdapterInfo_OK" position="400,145" size="38,31" zPosition="2" pixmap="PersianEmpireHD1-ramiMAHER/icons/lock_on.png" alphatest="blend" />
-<widget name="AdapterInfo" position="450,137" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="AdapterInfo_Text" position="450,137" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<eLabel position="60,190" size="550,1" backgroundColor="darkgrey" />
-<widget name="Networktext" position="60,210" size="310,25" zPosition="1" font="Regular;22" transparent="1" />
-<widget name="Network" position="60,240" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" />
-<widget name="NetworkInfo_Check" position="400,225" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" />
-<widget name="NetworkInfo" position="450,217" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="NetworkInfo_Text" position="450,217" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<eLabel position="60,280" size="550,1" backgroundColor="darkgrey" />
-<widget name="Dhcptext" position="60,290" size="310,25" zPosition="1" font="Regular;22" transparent="1" />
-<widget name="Dhcp" position="60,320" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" />
-<widget name="DhcpInfo_Check" position="400,315" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" />
-<widget name="DhcpInfo" position="450,297" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="DhcpInfo_Text" position="450,297" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<eLabel position="60,360" size="550,1" backgroundColor="darkgrey" />
-<widget name="IPtext" position="60,370" size="310,25" zPosition="1" font="Regular;22" transparent="1" />
-<widget name="IP" position="60,400" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" />
-<widget name="IPInfo_Check" position="400,385" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" />
-<widget name="IPInfo" position="450,377" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="IPInfo_Text" position="450,377" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<eLabel position="60,440" size="550,1" backgroundColor="darkgrey" />
-<widget name="DNStext" position="60,450" size="310,25" zPosition="1" font="Regular;22" transparent="1" />
-<widget name="DNS" position="60,480" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" />
-<widget name="DNSInfo_Check" position="400,465" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" />
-<widget name="DNSInfo" position="450,457" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="DNSInfo_Text" position="450,457" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<eLabel position="60,520" size="550,1" backgroundColor="darkgrey" />
-<widget name="EditSettingsButton" position="450,527" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" />
-<widget name="EditSettings_Text" position="450,527" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" />
-<widget name="InfoText" position="60,130" size="550,430" zPosition="3" font="Regular;22" halign="center" valign="center" backgroundColor="black" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="NetworkBrowser" position="0,0" size="1280,720" title="Network Neighbourhood" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="list" render="Listbox" position="60,160" size="540,360" zPosition="1" scrollbarMode="showOnDemand" transparent="1"><convert type="TemplatedMultiContent">
+</convert></widget><widget source="introduction" render="Label" position="60,480" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" /><widget source="introduction" render="Label" position="60,480" size="540,30" zPosition="1" font="Regular;24" backgroundColor="transpBlack" halign="center" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="NetworkAdapterTest" position="0,0" size="1280,720" title="Network test..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="Adaptertext" position="60,130" size="310,25" zPosition="1" font="Regular;22" transparent="1" /><widget name="Adapter" position="60,160" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" /><widget name="AdapterInfo_OK" position="400,145" size="38,31" zPosition="2" pixmap="PersianEmpireHD1-ramiMAHER/icons/lock_on.png" alphatest="blend" /><widget name="AdapterInfo" position="450,137" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="AdapterInfo_Text" position="450,137" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><eLabel position="60,190" size="550,1" backgroundColor="darkgrey" /><widget name="Networktext" position="60,210" size="310,25" zPosition="1" font="Regular;22" transparent="1" /><widget name="Network" position="60,240" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" /><widget name="NetworkInfo_Check" position="400,225" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" /><widget name="NetworkInfo" position="450,217" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="NetworkInfo_Text" position="450,217" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><eLabel position="60,280" size="550,1" backgroundColor="darkgrey" /><widget name="Dhcptext" position="60,290" size="310,25" zPosition="1" font="Regular;22" transparent="1" /><widget name="Dhcp" position="60,320" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" /><widget name="DhcpInfo_Check" position="400,315" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" /><widget name="DhcpInfo" position="450,297" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="DhcpInfo_Text" position="450,297" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><eLabel position="60,360" size="550,1" backgroundColor="darkgrey" /><widget name="IPtext" position="60,370" size="310,25" zPosition="1" font="Regular;22" transparent="1" /><widget name="IP" position="60,400" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" /><widget name="IPInfo_Check" position="400,385" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" /><widget name="IPInfo" position="450,377" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="IPInfo_Text" position="450,377" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><eLabel position="60,440" size="550,1" backgroundColor="darkgrey" /><widget name="DNStext" position="60,450" size="310,25" zPosition="1" font="Regular;22" transparent="1" /><widget name="DNS" position="60,480" size="310,25" zPosition="1" font="Regular;22" foregroundColors="#8c8c93,#f23d21,#1cff1c" transparent="1" /><widget name="DNSInfo_Check" position="400,465" size="38,31" zPosition="2" pixmaps="PersianEmpireHD1-ramiMAHER/icons/lock_on.png,PersianEmpireHD1-ramiMAHER/icons/lock_error.png" alphatest="blend" /><widget name="DNSInfo" position="450,457" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="DNSInfo_Text" position="450,457" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><eLabel position="60,520" size="550,1" backgroundColor="darkgrey" /><widget name="EditSettingsButton" position="450,527" size="160,40" zPosition="1" pixmaps="PersianEmpireHD1-ramiMAHER/rami-menu/select300_45black.png,PersianEmpireHD1-ramiMAHER/rami-menu/button160x40.png" /><widget name="EditSettings_Text" position="450,527" size="160,40" zPosition="2" font="Regular;22" halign="center" valign="center" transparent="1" foregroundColors="#ffffff,#ffffff,#ffffff" /><widget name="InfoText" position="60,130" size="550,430" zPosition="3" font="Regular;22" halign="center" valign="center" backgroundColor="black" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="860,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="NetworkBrowser" position="0,0" size="1280,720" title="Network Neighbourhood" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="list" render="Listbox" position="60,160" size="540,360" zPosition="1" scrollbarMode="showOnDemand" transparent="1"><convert type="TemplatedMultiContent">
 {"template": [
 MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
 MultiContentEntryText(pos = (70, 4), size = (400, 26), font=2, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the Hostname
@@ -2744,26 +2579,7 @@ MultiContentEntryPixmapAlphaTest(pos = (110, 6), size = (48, 48), png = 6), # in
 "fonts": [gFont("Regular", 20),gFont("Regular", 15),gFont("Regular", 22)],
 "itemHeight": 60
 }
-</convert></widget>
-<widget source="infotext" render="Label" position="60,550" size="540,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un25062748" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="150,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="420,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="720,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="990,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="200,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="470,650" size="250,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="770,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_blue" render="Label" position="1040,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="infotext" render="Label" position="60,550" size="540,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un25062748" transparent="1" /></screen>
-<screen name="ScanIP" position="90,100" size="1100,560" title="Scan IP"><eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="155,525" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="425,525" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="695,525" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="205,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="475,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="745,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="20,50" size="1060,25" scrollbarMode="showOnDemand" /></screen>
-<screen name="UserManager" position="90,100" size="1100,560" title="UserManager"><widget source="config" render="Listbox" position="10,20" size="750,420" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent">
+</convert></widget><widget source="infotext" render="Label" position="60,550" size="540,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un25062748" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="150,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="420,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="720,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="990,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="200,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="470,650" size="250,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="770,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_blue" render="Label" position="1040,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="infotext" render="Label" position="60,550" size="540,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un25062748" transparent="1" /></screen><screen name="ScanIP" position="90,100" size="1100,560" title="Scan IP"><eLabel position="0,518" size="1100,2" backgroundColor="grey" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="155,525" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="425,525" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="695,525" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="205,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="475,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="745,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="20,50" size="1060,25" scrollbarMode="showOnDemand" /></screen><screen name="UserManager" position="90,100" size="1100,560" title="UserManager"><widget source="config" render="Listbox" position="10,20" size="750,420" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent">
 {"template": [
 MultiContentEntryText(pos = (80, 7), size = (650, 50), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # index 4 is the status pixmap
@@ -2771,39 +2587,7 @@ MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # ind
 "fonts": [gFont("Regular", 40)],
 "itemHeight": 60
 }
-</convert></widget><eLabel position="780,0" size="2,518" backgroundColor="grey" />
-<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="480,525" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="830,525" size="35,35" alphatest="blend" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" />
-<widget source="key_red" render="Label" position="530,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="UserDialog" position="90,100" size="1100,560" title="UserDialog"><widget name="config" position="20,20" zPosition="1" size="740,00" scrollbarMode="showOnDemand" />
-<eLabel position="780,0" size="2,518" backgroundColor="grey" />
-<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="830,525" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="blend" />
-<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" />
-<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen>
-<screen name="AutoMountEdit" position="90,100" size="1100,560" title="MountEdit"><widget name="config" position="20,20" zPosition="1" size="740,00" scrollbarMode="showOnDemand" />
-<eLabel position="780,0" size="2,518" backgroundColor="grey" />
-<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="830,525" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" />
-<widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="blend" />
-<widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" />
-<widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen>
-<screen name="AutoMountView" position="90,100" size="1100,560" title="MountView"><widget source="legend1" render="Label" position="10,10" zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" />
-<widget source="legend2" render="Label" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" />
-<widget source="legend3" render="Label" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" />
-<eLabel position="0,75" size="780,2" backgroundColor="grey" />
-<widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent">
+</convert></widget><eLabel position="780,0" size="2,518" backgroundColor="grey" /><eLabel position="0,518" size="1100,2" backgroundColor="grey" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="480,525" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="830,525" size="35,35" alphatest="blend" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /><widget source="key_red" render="Label" position="530,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="UserDialog" position="90,100" size="1100,560" title="UserDialog"><widget name="config" position="20,20" zPosition="1" size="740,00" scrollbarMode="showOnDemand" /><eLabel position="780,0" size="2,518" backgroundColor="grey" /><eLabel position="0,518" size="1100,2" backgroundColor="grey" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="830,525" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="blend" /><widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" /><widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen><screen name="AutoMountEdit" position="90,100" size="1100,560" title="MountEdit"><widget name="config" position="20,20" zPosition="1" size="740,00" scrollbarMode="showOnDemand" /><eLabel position="780,0" size="2,518" backgroundColor="grey" /><eLabel position="0,518" size="1100,2" backgroundColor="grey" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="830,525" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /><widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="1020,450" zPosition="10" size="60,48" transparent="1" alphatest="blend" /><widget name="config" position="20,20" zPosition="1" size="740,300" scrollbarMode="showOnDemand" /><widget name="HelpWindow" position="180,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen><screen name="AutoMountView" position="90,100" size="1100,560" title="MountView"><widget source="legend1" render="Label" position="10,10" zPosition="1" size="130,60" font="Regular;18" halign="center" valign="center" /><widget source="legend2" render="Label" position="200,8" zPosition="1" size="400,60" font="Regular;20" halign="center" valign="center" /><widget source="legend3" render="Label" position="640,8" zPosition="1" size="120,60" font="Regular;20" halign="center" valign="center" /><eLabel position="0,75" size="780,2" backgroundColor="grey" /><widget source="config" render="Listbox" position="10,90" size="750,420" scrollbarMode="showOnDemand"><convert type="TemplatedMultiContent">
 {"template": [
 MultiContentEntryPixmapAlphaTest(pos = (40, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
 MultiContentEntryText(pos = (200, 5), size = (200, 28), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the sharename
@@ -2815,22 +2599,7 @@ MultiContentEntryPixmapAlphaTest(pos = (680, 6), size = (48, 48), png = 5), # in
 "fonts": [gFont("Regular", 22),gFont("Regular", 17)],
 "itemHeight": 60
 }
-</convert></widget><eLabel position="780,0" size="2,518" backgroundColor="grey" />
-<eLabel position="0,518" size="1100,2" backgroundColor="grey" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="480,525" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="830,525" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="530,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen>
-<screen name="AutoMountManager" position="0,0" size="1280,720" title="MountManager" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="config" render="Listbox" position="60,160" size="540,420" scrollbarMode="showOnDemand" transparent="1"><convert type="TemplatedMultiContent">
+</convert></widget><eLabel position="780,0" size="2,518" backgroundColor="grey" /><eLabel position="0,518" size="1100,2" backgroundColor="grey" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="480,525" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="830,525" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="530,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="880,525" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="introduction" render="Label" position="20,525" size="400,30" zPosition="10" font="Regular;24" halign="center" /></screen><screen name="AutoMountManager" position="0,0" size="1280,720" title="MountManager" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/lan2.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="config" render="Listbox" position="60,160" size="540,420" scrollbarMode="showOnDemand" transparent="1"><convert type="TemplatedMultiContent">
 {"template": [
 MultiContentEntryText(pos = (60, 5), size = (470, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 MultiContentEntryText(pos = (60, 35), size = (470, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
@@ -2839,194 +2608,4 @@ MultiContentEntryPixmapAlphaTest(pos = (10, 6), size = (48, 48), png = 3), # ind
 "fonts": [gFont("Regular", 22),gFont("Regular", 15)],
 "itemHeight": 60
 }
-</convert></widget>
-<widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="10" font="Regular;24" halign="center" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="10" font="Regular;24" halign="center" transparent="1" /></screen>
-<screen name="HarddiskSetup" position="340,134" size="600,502" title="Harddisk"><eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" />
-<widget name="model" position="10,20" size="580,28" font="Regular;25" halign="center" />
-<widget name="capacity" position="10,60" size="580,28" font="Regular;25" halign="center" />
-<widget name="bus" position="10,100" size="580,28" font="Regular;25" halign="center" />
-<eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5" />
-<widget name="initializetext" position="20,467" size="580,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red" /></screen>
-<screen name="NumericalTextInputHelpDialog" position="401,480" size="484,124" zPosition="10" flags="wfNoBorder">
-<ePixmap position="0,0" zPosition="-1" size="484,124" pixmap="PersianEmpireHD1-ramiMAHER/key_frame.png" />
-<widget name="key1" position="2,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key2" position="162,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key3" position="322,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key4" position="2,42" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key5" position="162,42" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key6" position="322,39" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key7" position="2,82" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key8" position="162,79" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" />
-<widget name="key9" position="322,82" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /></screen>
-<screen name="CIselectMainMenu" position="0,0" size="1280,720" title="CI assignment" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/bluep.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="CiList" position="70,150" size="540,300" scrollbarMode="showOnDemand" zPosition="2" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/recpaths.png" position="131,40" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/recordd.png" position="250,280" size="128,128" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="90,522" size="1060,100" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button1080x25.png" zPosition="2" transparent="1" /></screen>
-<screen name="InputDeviceSetup" position="center,center" size="560,440" title="Input device setup">
-<ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red.png" position="0,0" size="140,40" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green.png" position="140,0" size="140,40" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow.png" position="280,0" size="140,40" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue.png" position="420,0" size="140,40" alphatest="blend" />
-<widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,400" zPosition="1" size="560,2" />
-<widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="ManualFancontrol" position="0,0" size="1280,720" title="Standbymode Fancontrol settings" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/setupp.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="60,160" size="550,300" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button580x25.png" transparent="1" />
-<widget source="current" render="Label" position="60,500" zPosition="1" size="550,30" font="Regular;22" halign="center" valign="center" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="VideoEnhancementSetup" position="center,center" size="660,440" title="VideoEnhancementSetup">
-<ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="5,403" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="165,403" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="325,403" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="505,403" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="45,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="205,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_yellow" render="Label" position="365,407" zPosition="1" size="140,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_blue" render="Label" position="545,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="10,5" size="650,350" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button640x25.png" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,399" zPosition="1" size="660,2" />
-<widget source="introduction" render="Label" position="5,360" size="650,30" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="VideoEnhancementPreview" position="360,140" size="560,170" title="VideoEnhancementPreview">
-<ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="150,130" size="35,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="350,130" size="35,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="200,134" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="400,134" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="5,5" size="550,80" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button580x25.png" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,120" zPosition="1" size="560,2" />
-<widget source="introduction" render="Label" position="5,90" size="550,30" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="StandbySummary" position="0,0" size="132,64"><widget source="global.CurrentTime" render="Label" position="0,0" size="132,64" font="Regular; 27" halign="center" valign="center"><convert type="ClockToText">Format:%H:%M-%h.%d</convert></widget></screen>
-<screen name="WlanSelection" position="0,0" size="1280,720" title="Wireless Network Adapter Selection..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="description" render="Label" position="60,380" size="540,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="WlanSetup" position="0,0" size="1280,720" title="Wireless Network Setup Menu..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="description" render="Label" position="70,380" size="530,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="WlanConfig" position="0,0" size="1280,720" title="Wireless Network Configuration..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/arrow1.png" position="60,640" size="32,50" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/ok.png" position="1180,655" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/hd.png" position="561,650" size="161,37" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="60,160" size="540,275" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<eLabel text="IP Address : " position="60,450" size="150,0" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="ipaddress" render="Label" position="400,450" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="NetMask : " position="60,480" size="150,0" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="netmask" render="Label" position="400,480" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<eLabel text="Gateway : " position="60,510" size="150,0" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
-<widget source="gateway" render="Label" position="400,510" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="WlanScanAp" position="0,0" size="1280,720" title="Wireless Network AP Scan..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position=" 627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="Address" render="Label" position="60,320" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="ESSID" render="Label" position="60,350" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="Protocol" render="Label" position="60,380" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="Frequency" render="Label" position="60,410" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="Encryption key" render="Label" position="60,440" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<widget source="BitRate" render="Label" position="60,470" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="860,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_blue" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="Wlanstatus" position="0,0" size="1280,720" title="Wireless Network Status..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget source="status" render="Label" position="60,160" size="540,500" font="Regular;18" halign="left" backgroundColor="transpBlack" transparent="1" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen>
-<screen name="CrashlogReportConfiguration" position="0,0" size="1280,720" title="CrashlogReport Setting" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/setupp.png" position="790,424" size="200,200" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/arrow1.png" position="60,640" size="32,50" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/ok.png" position="1180,655" size="36,25" alphatest="blend" />
-<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
-<widget name="config" position="60,160" size="570,200" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" />
-<widget source="status" render="Label" position="60,360" size="570,60" zPosition="1" backgroundColor="red" font="Regular;20" halign="center" valign="center" transparent="1" />
-<widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="0,0" size="0,0" />
-<widget name="HelpWindow" position="85,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" />
-<ePixmap  pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" />
-<widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
-<widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen></skin>
+</convert></widget><widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="10" font="Regular;24" halign="center" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="introduction" render="Label" position="60,500" size="540,30" zPosition="10" font="Regular;24" halign="center" transparent="1" /></screen><screen name="HarddiskSetup" position="340,134" size="600,502" title="Harddisk"><eLabel position="0,0" size="600,2" backgroundColor="grey" zPosition="5" /><widget name="model" position="10,20" size="580,28" font="Regular;25" halign="center" /><widget name="capacity" position="10,60" size="580,28" font="Regular;25" halign="center" /><widget name="bus" position="10,100" size="580,28" font="Regular;25" halign="center" /><eLabel position="0,460" size="600,2" backgroundColor="grey" zPosition="5" /><widget name="initializetext" position="20,467" size="580,30" zPosition="1" font="Regular;24" halign="center" transparent="1" foregroundColor="red" /></screen><screen name="NumericalTextInputHelpDialog" position="401,480" size="484,124" zPosition="10" flags="wfNoBorder"><ePixmap position="0,0" zPosition="-1" size="484,124" pixmap="PersianEmpireHD1-ramiMAHER/key_frame.png" /><widget name="key1" position="2,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key2" position="162,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key3" position="322,2" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key4" position="2,42" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key5" position="162,42" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key6" position="322,39" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key7" position="2,82" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key8" position="162,79" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /><widget name="key9" position="322,82" size="160,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1" /></screen><screen name="CIselectMainMenu" position="0,0" size="1280,720" title="CI assignment" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/bluep.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="CiList" position="70,150" size="540,300" scrollbarMode="showOnDemand" zPosition="2" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/recpaths.png" position="131,40" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/recordd.png" position="250,280" size="128,128" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="90,522" size="1060,100" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button1080x25.png" zPosition="2" transparent="1" /></screen><screen name="InputDeviceSetup" position="center,center" size="560,440" title="Input device setup"><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red.png" position="0,0" size="140,40" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green.png" position="140,0" size="140,40" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow.png" position="280,0" size="140,40" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue.png" position="420,0" size="140,40" alphatest="blend" /><widget source="key_red" render="Label" position="0,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="140,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="280,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_blue" render="Label" position="420,0" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="5,50" size="550,350" scrollbarMode="showOnDemand" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,400" zPosition="1" size="560,2" /><widget source="introduction" render="Label" position="5,410" size="550,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="ManualFancontrol" position="0,0" size="1280,720" title="Standbymode Fancontrol settings" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/setupp.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="300,40" size="680,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="60,160" size="550,300" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button580x25.png" transparent="1" /><widget source="current" render="Label" position="60,500" zPosition="1" size="550,30" font="Regular;22" halign="center" valign="center" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="VideoEnhancementSetup" position="center,center" size="660,440" title="VideoEnhancementSetup"><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="5,403" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="165,403" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/yellow35x35.png" position="325,403" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="505,403" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="45,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="205,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="key_yellow" render="Label" position="365,407" zPosition="1" size="140,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="key_blue" render="Label" position="545,407" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="10,5" size="650,350" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button640x25.png" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,399" zPosition="1" size="660,2" /><widget source="introduction" render="Label" position="5,360" size="650,30" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="VideoEnhancementPreview" position="360,140" size="560,170" title="VideoEnhancementPreview"><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="150,130" size="35,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="350,130" size="35,35" alphatest="blend" /><widget source="key_red" render="Label" position="200,134" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="400,134" zPosition="1" size="120,35" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="5,5" size="550,80" scrollbarMode="showOnDemand" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button580x25.png" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/div-h.png" position="0,120" zPosition="1" size="560,2" /><widget source="introduction" render="Label" position="5,90" size="550,30" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="StandbySummary" position="0,0" size="132,64"><widget source="global.CurrentTime" render="Label" position="0,0" size="132,64" font="Regular; 27" halign="center" valign="center"><convert type="ClockToText">Format:%H:%M-%h.%d</convert></widget></screen><screen name="WlanSelection" position="0,0" size="1280,720" title="Wireless Network Adapter Selection..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="description" render="Label" position="60,380" size="540,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="WlanSetup" position="0,0" size="1280,720" title="Wireless Network Setup Menu..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="description" render="Label" position="70,380" size="530,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="WlanConfig" position="0,0" size="1280,720" title="Wireless Network Configuration..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/arrow1.png" position="60,640" size="32,50" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/ok.png" position="1180,655" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/hd.png" position="561,650" size="161,37" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="60,160" size="540,275" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><eLabel text="IP Address : " position="60,450" size="150,0" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="ipaddress" render="Label" position="400,450" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><eLabel text="NetMask : " position="60,480" size="150,0" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="netmask" render="Label" position="400,480" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><eLabel text="Gateway : " position="60,510" size="150,0" font="Regular;22" backgroundColor="transpBlack" transparent="1" /><widget source="gateway" render="Label" position="400,510" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /></screen><screen name="WlanScanAp" position="0,0" size="1280,720" title="Wireless Network AP Scan..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position=" 627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="Address" render="Label" position="60,320" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="ESSID" render="Label" position="60,350" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="Protocol" render="Label" position="60,380" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="Frequency" render="Label" position="60,410" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="Encryption key" render="Label" position="60,440" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><widget source="BitRate" render="Label" position="60,470" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/blue35x35.png" position="860,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_blue" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="Wlanstatus" position="0,0" size="1280,720" title="Wireless Network Status..." flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/usb.png" position="790,424" size="200,200" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget source="status" render="Label" position="60,160" size="540,500" font="Regular;18" halign="left" backgroundColor="transpBlack" transparent="1" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen><screen name="CrashlogReportConfiguration" position="0,0" size="1280,720" title="CrashlogReport Setting" flags="wfNoBorder"><widget source="session.VideoPicture" render="Pig" position="627,132" size="524,282" zPosition="3" backgroundColor="transparent2" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/rami-rm.png" position="0,0" size="1280,720" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,100" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/separator2.png" position="0,620" size="1280,11" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/scann.png" position="695,439" size="200,200" zPosition="-1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/exit.png" position="1180,45" size="36,25" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/setupp.png" position="790,424" size="200,200" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/arrow1.png" position="60,640" size="32,50" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/rami-menu/ok.png" position="1180,655" size="36,25" alphatest="blend" /><widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="rami;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" /><widget name="config" position="60,160" size="570,200" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="PersianEmpireHD1-ramiMAHER/rami-menu/button540x25.png" transparent="1" /><widget source="status" render="Label" position="60,360" size="570,60" zPosition="1" backgroundColor="red" font="Regular;20" halign="center" valign="center" transparent="1" /><widget name="VKeyIcon" pixmap="PersianEmpireHD1-ramiMAHER/vkey_icon.png" position="0,0" size="0,0" /><widget name="HelpWindow" position="85,450" zPosition="1" size="1,1" transparent="1" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/red35x35.png" position="450,650" size="250,35" alphatest="blend" /><ePixmap pixmap="PersianEmpireHD1-ramiMAHER/buttons/green35x35.png" position="740,650" size="250,35" alphatest="blend" /><widget source="key_red" render="Label" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /><widget source="key_green" render="Label" position="790,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" /></screen></skin>
