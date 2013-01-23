@@ -261,7 +261,7 @@ PersianEmpireHD1 - Copyright (C) 2012 GPL-III by ramiMAHER
   </widget>
   <ePixmap position="1096,632" zPosition="2" size="115,21" pixmap="PersianEmpireHD1-ramiMAHER/icons/snroff.png" alphatest="blend" />
   <widget source="session.CurrentService" render="Label" position="80,598" size="495,18" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="darkgrey" font="Regular; 17" valign="center" halign="left">
-    <convert type="pliExpertInfo">ServiceInfo</convert>
+    <convert type="PliExtraInfo">ServiceInfo</convert>
   </widget>
   <widget source="session.CurrentService" render="Label" position="679,640" zPosition="3" size="216,18" font="Regular; 17" valign="center" halign="center" transparent="1" backgroundColor="black">
     <convert type="PliExtraInfo">CryptoBar</convert>
