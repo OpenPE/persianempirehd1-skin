@@ -1,9 +1,3 @@
-# ServiceInfo2 based on standart ServiceInfo from E2
-# 
-# made by bigroma
-# ver 0.2 11/07/2011
-#
-
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.Element import cached
@@ -30,10 +24,6 @@ class ServiceInfo2(Converter, object):
 			return "N/A"
 		if v == -2:
 			return info.getInfoString(what)
-		# v == -3 now use only for caids
-		# i don't know how it work with another parametrs
-		# now i made for returning values as hex string separated by space
-		# may be better use convert for formating output but it TBA 
 		if v == -3:
 			t_objs = info.getInfoObject(what)
 			if t_objs and (len(t_objs) > 0):
