@@ -1,10 +1,10 @@
-PersianEmpireHD1 Skin By ramiMAHER
+PersianEmpireHD1 skin by ramiMAHER
 =====================
 
-Persian Professionals Official Website :
+Persian Professionals official website :
 
 https://pe4k.com
 
-DreamOEM Official Website :
+DreamOEM official website :
 
 http://www.dreamoem.com
